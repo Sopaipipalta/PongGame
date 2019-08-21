@@ -7,7 +7,7 @@ public class BallManager : MonoBehaviour
     public static BallManager instance;
     private List<int> potentialAngles = new List<int>
     {
-        60,160,270,20
+        60,160,-160,-60
     };
     
 
@@ -21,11 +21,46 @@ public class BallManager : MonoBehaviour
     private void Start()
     {
         InstantiateBall();
+        InstantiateBall();
+        InstantiateBall();
+        InstantiateBall();
+        InstantiateBall();
+        InstantiateBall(); InstantiateBall();
+        InstantiateBall();
+        InstantiateBall(); InstantiateBall();
+        InstantiateBall();
+        InstantiateBall(); InstantiateBall();
+        InstantiateBall();
+        InstantiateBall(); InstantiateBall();
+        InstantiateBall();
+        InstantiateBall(); InstantiateBall();
+        InstantiateBall();
+        InstantiateBall(); InstantiateBall();
+        InstantiateBall();
+        InstantiateBall();
+        InstantiateBall();
+        InstantiateBall();
+        InstantiateBall();
+        InstantiateBall();
+        InstantiateBall();
+        InstantiateBall(); InstantiateBall();
+        InstantiateBall();
+        InstantiateBall(); InstantiateBall();
+        InstantiateBall();
+        InstantiateBall(); InstantiateBall();
+        InstantiateBall();
+        InstantiateBall(); InstantiateBall();
+        InstantiateBall();
+        InstantiateBall(); InstantiateBall();
+        InstantiateBall();
+        InstantiateBall(); InstantiateBall();
+        InstantiateBall();
+        InstantiateBall();
     }
     public void InstantiateBall()
     {
         int AngleIndex = Random.Range(0, 4);
-        GameObject ballCopy = Instantiate(ball, Vector3.zero, Quaternion.Euler(0, potentialAngles[AngleIndex],0));
+        GameObject ballCopy  = Instantiate(ball, Vector3.zero, Quaternion.Euler(0, potentialAngles[AngleIndex],0));
 
         
 
