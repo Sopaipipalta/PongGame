@@ -14,6 +14,7 @@ public class Goal : MonoBehaviour
         Destroy(other.gameObject);
 
         BallManager.instance.InstantiateBall();
+        NewBehaviourScript.instance.InstantiateBall();
 
         if (TeamName == "TeddyBears")
         { 

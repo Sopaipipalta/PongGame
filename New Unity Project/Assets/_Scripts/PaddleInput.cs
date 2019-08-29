@@ -16,17 +16,17 @@ public class PaddleInput : MonoBehaviour
     public float speed;
     public float ClampValue;
     public string axisName;
-    public string PunchAxis;
-    private bool punching;
+   // public string PunchAxis;
+  // [SerializeField] private bool punching;
     private Rigidbody paddleRB;
-    public float punchPower;
-    public float startZ;
-    public float clampZ;
+   // public float punchPower;
+  //  public float startX;
+  //  public float clampX;
     
 
     private void Start()
     {
-        startZ = transform.position.x;
+       // startX = transform.position.x;
         paddleRB = GetComponent<Rigidbody>();
         if (playerSettings == PlayerController.Player1)
         {
@@ -41,13 +41,13 @@ public class PaddleInput : MonoBehaviour
 
 
 
-    public void Punch()
-    {
+  //  public void Punch()
+   // {
 
 
-        paddleRB.AddForce(-transform.right * punchPower);
+     //   paddleRB.AddForce(-transform.right * punchPower);
 
-    }
+  //  }
     public void MovePaddle(float amountToMove)
     {
         Vector3 ClampedGameobjectPosition=
@@ -65,17 +65,17 @@ public class PaddleInput : MonoBehaviour
 
         MovePaddle(Input.GetAxis(axisName));
 
-        if (Input.GetKey(KeyCode.Space))
-        {
-            punching = true;
-        }
+      //  if (Input.GetKey(KeyCode.Space))
+      //  {
+       //     punching = true;
+      //  }
 
-        transform.position = new Vector3(Mathf.Clamp (transform.position.z,startZ,clampZ), transform.position.y, transform.position.x);
+     //   transform.position = new Vector3(Mathf.Clamp (transform.position.x,startX,clampX), transform.position.y, transform.position.z);
 
 
-        if (punching== true){
-            Punch();
-        }
+      //  if (punching== true){
+        //    Punch();
+      //  }
     }
 
    
